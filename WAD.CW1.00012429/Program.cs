@@ -1,3 +1,4 @@
+using WAD.DAL;
 internal class Program
 {
 	private static void Main(string[] args)
@@ -10,6 +11,9 @@ internal class Program
 		// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 		builder.Services.AddEndpointsApiExplorer();
 		builder.Services.AddSwaggerGen();
+
+		IConfiguration config = builder.Configuration;
+		builder.Services.ConfigureServicesDal(config);
 
 		var app = builder.Build();
 

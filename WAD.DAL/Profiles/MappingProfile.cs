@@ -1,4 +1,4 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using AutoMapper;
 using WAD.CW1._00012429.DTOs;
 using WAD.CW1._00012429.Models;
 
@@ -9,12 +9,12 @@ namespace WAD.CW1._00012429.Profiles
 		public MappingProfile()
 		{
 			// Mapping from Entity to DTO
-			CreateMap<Product, ProductDto>();
-			CreateMap<Feedback, FeedbackDto>();
+			CreateMap<Product, ProductDTO>();
+			CreateMap<Feedback, FeedbackDTO>();
 
 			// Mapping from DTO to Entity (if needed for POST/PUT operations)
-			CreateMap<ProductDto, Product>();
-			CreateMap<FeedbackDto, Feedback>();
+			CreateMap<ProductDTO, Product>();
+			CreateMap<FeedbackDTO, Feedback>();
 		}
 	}
 }
