@@ -26,7 +26,7 @@ namespace WAD.CW1._00012429.Repositories
 		{
 			var result = _context.Feedbacks
 						   .Include(f => f.Product)
-						   .FirstOrDefault(f => f.FeedbackId == id);
+						   .FirstOrDefault(f => f.Id == id);
 
 			if (result == null)
 			{
